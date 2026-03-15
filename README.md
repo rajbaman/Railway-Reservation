@@ -1,51 +1,68 @@
-# Railway-Reservation-System
+![Jovian Banner](https://github.com/thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot/blob/main/assets/Jovian-Banner-Dark.png#gh-dark-mode-only)
 
-## Overview
-The Railway Reservation System is a responsive web application designed using HTML, CSS, and JavaScript. This project aims to provide users with an intuitive and seamless experience for booking railway tickets. The application is fully responsive, ensuring optimal viewing on various devices.
+![Jovian Banner](https://github.com/thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot/blob/main/assets/Jovian-Banner-Light.png#gh-light-mode-only)
+Jovian is a [DialogFlow](https://cloud.google.com/dialogflow) powered conversational chatbot developed to deliver information regarding latest Government schemes and affiliated policies for public services. The NLP based conversational platform can be used to interact with the public, provide assistance with tasks, analyse sentiments and collect and analyze data to offer appropriate services
 
-## Features
-- **User-Friendly Interface**: Clean and intuitive design for easy navigation.
-- **Responsive Design**: Fully responsive layout compatible with desktop, tablet, and mobile devices.
-- **Dynamic Content**: JavaScript-powered dynamic content for a seamless user experience.
-- **Real-time Updates**: Instant updates to the UI based on user interactions.
+This project was started in April 2022 as a combined initiative by [Ashwin](https://github.com/thisisashwinraj), & [Gayathri](https://github.com/rameshgayathri), and has been licensed under the [Eclipse Public License 2.0](https://github.com/thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot/blob/main/LICENSE) . All PR's are maintained by Ashwin. Try interacting with Jovian deployed over Telegram [here](http://t.me/jovian_bot)
 
-## Technologies Used
-- **HTML**: For structuring the content.
-- **CSS**: For styling the application.
-- **JavaScript**: For adding interactivity and dynamic content.
-- **Hosting**: [Tap here](https://railway-reservation-system-grp3.vercel.app/)
+# SubDirectories and Deployment Platforms
+### Files and Folders
+**[Intents:](https://github.com/thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot/tree/main/intents)** This folder contains over 100+ intents that are used to categorize user intentions, for each conversation turns
+<br>**[Entities:](https://github.com/thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot/tree/main/entities)** This subdirectory contains entities that are used to identify & extract specific data from end-user expressions
+<br>**[agent.json](https://github.com/thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot/blob/main/agent.json)** & **[package.json](https://github.com/thisisashwinraj/JovianBot-Policy-Chatbot/blob/main/package.json)** are inline editor file, & are not overwritten when importing/restoring the dialogflow agent
 
-## Live Demo
-Check out the live demo [here](https://railway-reservation-system-grp3.vercel.app/).
+### Deployment Platforms
 
-## Getting Started
-To get a local copy up and running, follow these simple steps.
+Direct end-user interactions are handled by [DialogFlow](https://dialogflow.cloud.google.com/) in a platform-specific way. Currently, Jovian is integrated only with text based platforms like Telegram and Messenger. These integrations are fully supported by DialogFlow and are configured with the DialogFlow Console. DialogFlow phone Gateway and a variety of other partner [built-in telephony integrations](https://cloud.google.com/dialogflow/cx/docs/concept/integration) are currently under alpha/beta testing and are scheduled to be made available in the upcoming versions
 
-### Prerequisites
-- Web browser
-- Internet connection
+# Usage, Development and Privacy Policy
 
-### Installation
-1. Clone the repo
-   sh
-   git clone https://github.com/affancoder/railway-reservation-system.git
-   
-2. Open the `index.html` file in your browser to view the application locally.
+To invoke this bot, the user can simply start with a greeting or a query. This agent is set to match with user's language settings. The [default welcome intents](https://github.com/thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot/blob/main/intents/Default%20Welcome%20Intent.json) usually includes a short description of the services that Jovian can deliver. Quick replies, and card responses are available for the Telegram deployment of the bot for user convenience. [Dialogflow API](https://cloud.google.com/dialogflow/es/docs/reference/rest/v2-overview) requests and responses are logged to [Cloud Logging](https://cloud.google.com/logging). As per the privacy policy, the users data is totally secure and no maintainer has any access over the messages that the user may send to the action or the responses that it sends back
 
-## Usage
-1. Open the application in a web browser.
-2. Navigate through the pages using the navigation menu.
-3. Fill in the required details in the booking form.
-4. Confirm your booking to see the details.
+![](https://github.com/thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot/blob/main/flutterbot/assets/jovianBotDemo.gif)
 
-## Contributing
-Contributions are what make the open-source community such an amazing place to be, learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+[Interaction logs](https://cloud.google.com/dialogflow/es/docs/interaction-logging) capture conversation messages from both end-users, and the agent. This user information may reside within the agents logs stored by Dialogflow for upto 400 days. Interactions that had issues with intent matching show a warning icon in yellow and the interactions that had webhook error, show a warning icon in red. Usage data such as information regarding the number of users using the bot, the geographical regions they are located in, and basic data including users’ language preference, device type, and length, & frequency of use can be accessed to make bot better
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+The Privacy Policy for this chatbot can be found [here](https://www.drive.google.com/file/d/15lGNlJJCo90k0x6s2jnaozdx_fpK8lv8/view?usp=sharing). Jovian does not require the users to sign up into a new account (some third-parties may require signingup). No cloud functions provided by Firebase are used for developing this bot
 
-## Contact
-MD Affan Asghar - [affanasgar8@gmail.com](mailto:affanasgar8@gmail.com)
+# Contribution and Guidelines
+
+To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
+```
+https://github.com/thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot.git
+```
+Before cloning the repository, make sure to navigate to the working subdirectory of your command line interface and ensure that no folder with same name exists. Other ways to clone the repository includes using a password protected [SSH key](git@github.com:thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot.git), or by using [Git CLI](https://cli.github.com/). The changes may additionally be performed by opening this repo using [GitHub Desktop](https://desktop.github.com/)
+
+### Edit the Source Code and Make Desired Changes
+
+Goto the [DialogflowConsole](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj-nLqpgOf5AhWuR2wGHSJcBD8QFnoECAIQAQ&url=https%3A%2F%2Fdialogflow.cloud.google.com%2F&usg=AOvVaw2AsLbzcr82t1GsECYjUNf0) and select custom intent option. Import the code into Dialogflow. Make the appropriate changes, test the dialogflow agent on the simulator, download the ZIP file and make a pull request on this repository.
+
+### Submitting a Pull Request
+Before opening a Pull Request, it is recommended to have a look at the full contributing page to make sure your code complies with all the pull request guidelines. Please ensure that you satisfy the [~/checklist](https://github.com/thisisashwinraj/Jovian-Govt-Policy-Enquiry-Chatbot/blob/main/.github/PULL_REQUEST_TEMPLATE/pull_request_template.md) before submitting your PR.
+
+Navigate to this subdirectory & check status of all files that were altered (red) by running the below code in Git Bash:
+```
+git status
+```
+Stage all your files that are to be pushed into your pull request. This can be done in two ways - stage all or some files:
+```
+git add .            // adds every single file that shows up red when running git status
+```
+```
+git add <filename>   // type in the particular file that you would like to add to the PR
+```
+
+Commit all the changes that you've made and describe in brief the changes that you have made using this command:
+```
+git commit -m "<commit_message>"
+```
+Push all of your updated work into this GitHub repo in the form of a Pull Request by running the following command:
+```
+git push origin main
+```
+All pull requests are reviewed on a monthly rolling basis. Your understanding is appreciate during this review process.
+
+# License and Project Status
+Jovian Bot and all of its resources are distributed under [Eclipse Public License 2.0](https://github.com/thisisashwinraj/JovianBot-ChatBot-For-Social-Good/blob/main/LICENSE). The bot is integrated with [Telegram](http://t.me/jovian_bot) and Messenger. The latest released stable version of Jovian Bot is v0.1.0, and is available in English Language. All new releases are logged in the [/Versions](https://github.com/thisisashwinraj/JovianBot-ChatBot-For-Social-Good/tree/main/versions). The agent is currently in beta phase, and more updates will be released in future
+
+Upcoming versions will include support for more policies, new platform integrations, & better user-intents matchings.
